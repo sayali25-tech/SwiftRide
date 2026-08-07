@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SwiftRide - Book Your Transport</title>
+<meta name="description" content="Book rides & vehicles instantly with SwiftRide - a modern transport booking platform." />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div id="loader"><div class="spinner"></div></div>
+
+<header class="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo">🚖 SwiftRide</a>
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="pages/about.html">About</a></li>
+        <li><a href="pages/contact.html">Contact</a></li>
+        <li><a href="pages/login.html" class="btn-outline">Login</a></li>
+        <li><a href="pages/signup.html" class="btn-primary">Sign Up</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger">&#9776;</button>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-inner">
+    <div class="hero-text">
+      <h1>Ride Anywhere, <span>Anytime.</span></h1>
+      <p>Book cabs, bikes and vans in seconds. Safe, fast and affordable transport at your fingertips.</p>
+      <a href="#search" class="btn-primary big">Book a Ride</a>
+    </div>
+    <div class="hero-img">
+      <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=900&auto=format&fit=crop" alt="Car"/>
+    </div>
+  </div>
+</section>
+
+<section id="search" class="search-section">
+  <div class="container">
+    <h2>Search a Ride</h2>
+    <form id="searchForm" class="search-form" novalidate>
+      <div class="field">
+        <label>Pickup</label>
+        <input type="text" id="pickup" placeholder="Enter pickup location" />
+        <small class="error" data-for="pickup"></small>
+      </div>
+      <div class="field">
+        <label>Destination</label>
+        <input type="text" id="destination" placeholder="Enter destination" />
+        <small class="error" data-for="destination"></small>
+      </div>
+      <div class="field">
+        <label>Date</label>
+        <input type="date" id="date" />
+        <small class="error" data-for="date"></small>
+      </div>
+      <div class="field">
+        <label>Time</label>
+        <input type="time" id="time" />
+        <small class="error" data-for="time"></small>
+      </div>
+      <button type="submit" class="btn-primary">Search Rides</button>
+    </form>
+    <div id="searchResults" class="results"></div>
+  </div>
+</section>
+
+<section class="vehicles">
+  <div class="container">
+    <h2>Choose Your Vehicle</h2>
+    <div class="vehicle-grid" id="vehicleGrid"></div>
+  </div>
+</section>
+
+<section class="features">
+  <div class="container">
+    <h2>Why SwiftRide?</h2>
+    <div class="feature-grid">
+      <div class="feature"><div class="icon">⚡</div><h3>Fast Booking</h3><p>Reserve a ride in under 30 seconds.</p></div>
+      <div class="feature"><div class="icon">🛡️</div><h3>Verified Drivers</h3><p>Every driver is background-checked.</p></div>
+      <div class="feature"><div class="icon">💰</div><h3>Best Prices</h3><p>Transparent, upfront pricing always.</p></div>
+      <div class="feature"><div class="icon">🌍</div><h3>24/7 Service</h3><p>Available whenever you need us.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <p>&copy; 2026 SwiftRide. Built for demo purposes.</p>
+  </div>
+</footer>
+
+<!-- ✅ COMPLETE CHAT & CALL ASSISTANT BLOCK (No edits needed) -->
+<div class="floating-buttons">
+  <button id="callToggle" class="float-btn call-btn" title="AI Voice Call Assistant">📞</button>
+  <button id="chatToggle" class="float-btn chat-btn" title="Text Chat">💬</button>
+</div>
+
+<div class="chat-window" id="chatWindow">
+  <div class="chat-header">SwiftRide Assistant<button id="chatClose">×</button></div>
+  <div id="listeningStatus" style="display:none; color:#f59e0b; font-size:0.85rem; font-weight:bold; text-align:center; padding-top:8px;">🎙️ Listening... Speak now!</div>
+  <div class="chat-body" id="chatBody"></div>
+  <form class="chat-input" id="chatForm">
+    <input type="text" id="chatInput" placeholder="Ask something..." autocomplete="off"/>
+    <button type="button" id="voiceBtn" class="voice-btn" title="Click to speak">🎤</button>
+    <button type="submit">➤</button>
+  </form>
+</div>
+
+<script src="js/main.js"></script>
+<script src="js/booking.js"></script>
+<script src="js/chatbot.js"></script>
+</body>
+</html>
