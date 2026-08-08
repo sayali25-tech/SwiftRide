@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     grid.querySelectorAll('.book-btn').forEach(btn => {
       btn.addEventListener('click', e => {
         const name = e.target.closest('.vehicle-card').querySelector('h3').textContent;
-        alert(`✅ ₹${name} booking initiated!\n(Demo — connect a backend to complete.)`);
+        alert('✅ ₹${name} booking initiated!');
       });
     });
   }
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="price">₹${(v.price*distance).toFixed(2)}</div>
             <button class="btn-primary">Book</button>
           </div>`).join('');
-      results.querySelectorAll('button').forEach(b => b.addEventListener('click', () => alert('✅ Ride booked! (Demo)')));
+      results.querySelectorAll('button').forEach(b => b.addEventListener('click', () => alert('✅ Ride booked!')));
     }, 800);
   });
 });
